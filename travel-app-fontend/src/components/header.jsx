@@ -1,16 +1,43 @@
-import { NavLink, Link } from "react-router-dom";
+
+import { NavLink, Link, useNavigate } from "react-router-dom";
 import { FaRegUser, FaRegHeart } from "react-icons/fa";
+import { useState } from "react";
 import "../css/header.css";
 
 function Header() {
+  const navigate = useNavigate();
+  const [user, setUser] = useState(() => {
+    const saved = localStorage.getItem("user");
+    return saved ? JSON.parse(saved) : null;
+  });
+
+  async function deconnecter() {
+    try {
+      const res = await fetch(
+        "http://localhost/php/TRAVEL/travel-app-backend/routes/auth/deconnexion.php",
+        {
+          method: "POST",
+          credentials: "include",
+        }
+      );
+
+      const data = await res.json();
+
+      if (res.ok && data.success) {
+        localStorage.removeItem("user");
+        setUser(null);
+        navigate("/");
+      }
+    } catch (error) {
+      console.error("Erreur de déconnexion :", error);
+    }
+  }
+
   return (
     <header>
       <div className="header-contenu">
-
-        {/* Logo à gauche */}
         <Link to="/" className="logo">Rihla</Link>
 
-        {/* Liens au milieu */}
         <nav>
           <NavLink to="/" end>Accueil</NavLink>
           <NavLink to="/a-propos">À propos</NavLink>
@@ -18,16 +45,26 @@ function Header() {
           <NavLink to="/contact">Contact</NavLink>
         </nav>
 
-        {/* Icônes à droite */}
         <div className="header-icones">
           <Link to="/favoris" aria-label="Favoris">
             <FaRegHeart />
           </Link>
-          <Link to="/inscription" aria-label="Inscription">
-            <FaRegUser />
-          </Link>
-        </div>
 
+          {user ? (
+            <button
+              type="button"
+              onClick={deconnecter}
+              aria-label="Déconnexion"
+              title="Déconnexion"
+            >
+              Déconnexion
+            </button>
+          ) : (
+            <Link to="/inscription" aria-label="Inscription" title="Inscription">
+              <FaRegUser />
+            </Link>
+          )}
+        </div>
       </div>
     </header>
   );

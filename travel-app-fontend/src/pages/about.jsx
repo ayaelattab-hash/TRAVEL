@@ -1,27 +1,68 @@
-
+import {
+  FaPlaneDeparture,
+  FaMapMarkedAlt,
+  FaHandshake,
+  FaMapMarkerAlt,
+  FaPhoneAlt,
+  FaRegEnvelope,
+  FaRegClock,
+  FaCheck,
+} from "react-icons/fa";
 import Header from "../components/header";
 import Footer from "../components/footer";
-// import "./acceuil.css";
 import "../css/about.css";
 
 const services = [
   {
-    icon: "✈️",
+    icon: <FaPlaneDeparture />,
     titre: "Organisation de voyages",
     description:
       "Nous vous aidons à organiser vos voyages selon vos envies et votre budget.",
   },
   {
-    icon: "🗺️",
+    icon: <FaMapMarkedAlt />,
     titre: "Circuits touristiques",
     description:
       "Découvrez les plus belles destinations du Maroc grâce à nos circuits touristiques.",
   },
   {
-    icon: "🤝",
+    icon: <FaHandshake />,
     titre: "Conseils personnalisés",
     description:
       "Notre équipe vous accompagne pour choisir le voyage qui vous convient.",
+  },
+];
+
+const points = [
+  "Un accompagnement personnalisé",
+  "Des conseils adaptés à vos besoins",
+  "La découverte des destinations marocaines",
+  "Une organisation simple et pratique",
+];
+
+// Mêmes informations que la page Contact
+const infos = [
+  {
+    icon: <FaMapMarkerAlt />,
+    titre: "Notre adresse",
+    lignes: ["123, Avenue Hassan II", "Agadir 80000, Maroc"],
+  },
+  {
+    icon: <FaPhoneAlt />,
+    titre: "Téléphone",
+    lignes: ["+212 5 28 00 00 00"],
+    lien: "tel:+212528000000",
+  },
+  {
+    icon: <FaRegEnvelope />,
+    titre: "E-mail",
+    lignes: ["contact@rihla-voyages.ma"],
+    lien: "mailto:contact@rihla-voyages.ma",
+  },
+  {
+    icon: <FaRegClock />,
+    titre: "Horaires",
+    lignes: ["Lun – Ven : 9h – 19h", "Samedi : 9h – 14h"],
   },
 ];
 
@@ -34,21 +75,16 @@ function Apropos() {
         {/* En-tête de la page */}
         <section className="ap-entete">
           <div className="ap-entete-contenu">
-            <span className="ap-surtitre">RIHLA VOYAGES</span>
+            <span className="ap-surtitre ap-surtitre-clair">RIHLA VOYAGES</span>
             <h1>À propos de nous</h1>
-            <p>
-              Découvrez notre agence et notre passion pour les voyages.
-            </p>
+            <p>Découvrez notre agence et notre passion pour les voyages.</p>
           </div>
         </section>
 
         {/* Présentation de l'agence */}
         <section className="ap-presentation">
           <div className="ap-presentation-image">
-            <img
-              src="/image/magasin.jpg"
-              alt="Découverte du Maroc"
-            />
+            <img src="/image/magasin.jpg" alt="Notre agence Rihla à Agadir" />
           </div>
 
           <div className="ap-presentation-texte">
@@ -57,8 +93,8 @@ function Apropos() {
             <h2>Bienvenue chez Rihla</h2>
 
             <p>
-              Rihla est une agence de voyages dédiée à la découverte,
-              à l'aventure et à la découverte de nouvelles cultures.
+              Rihla est une agence de voyages dédiée à l'aventure et à la
+              rencontre de nouvelles cultures.
             </p>
 
             <p>
@@ -79,18 +115,15 @@ function Apropos() {
           <div className="ap-titre-section">
             <span className="ap-surtitre">CE QUE NOUS PROPOSONS</span>
             <h2>Nos services</h2>
-            <p>
-              Des services pensés pour rendre votre voyage plus simple.
-            </p>
+            <span className="ap-trait"></span>
+            <p>Des services pensés pour rendre votre voyage plus simple.</p>
           </div>
 
           <div className="ap-services-cartes">
-            {services.map((service, index) => (
-              <article className="ap-service-carte" key={index}>
+            {services.map((service) => (
+              <article className="ap-service-carte" key={service.titre}>
                 <div className="ap-service-icone">{service.icon}</div>
-
                 <h3>{service.titre}</h3>
-
                 <p>{service.description}</p>
               </article>
             ))}
@@ -110,18 +143,17 @@ function Apropos() {
             </p>
 
             <ul className="ap-points">
-              <li>✓ Un accompagnement personnalisé</li>
-              <li>✓ Des conseils adaptés à vos besoins</li>
-              <li>✓ La découverte des destinations marocaines</li>
-              <li>✓ Une organisation simple et pratique</li>
+              {points.map((point) => (
+                <li key={point}>
+                  <FaCheck />
+                  <span>{point}</span>
+                </li>
+              ))}
             </ul>
           </div>
 
           <div className="ap-pourquoi-image">
-            <img
-              src="/image/personne2.jpg"
-              alt="Destination touristique au Maroc"
-            />
+            <img src="/image/phototext.jpg" alt="Voyageurs au Maroc" />
           </div>
         </section>
 
@@ -130,42 +162,26 @@ function Apropos() {
           <div className="ap-titre-section">
             <span className="ap-surtitre">CONTACTEZ-NOUS</span>
             <h2>Informations de notre agence</h2>
-            <p>
-              Besoin d'informations ? Nous sommes à votre écoute.
-            </p>
+            <span className="ap-trait"></span>
+            <p>Besoin d'informations ? Nous sommes à votre écoute.</p>
           </div>
 
           <div className="ap-contact-cartes">
-            <article className="ap-contact-carte">
-              <div className="ap-contact-icone">📍</div>
-              <h3>Notre adresse</h3>
-              <p>Avenue Hassan II, Agadir, Maroc</p>
-            </article>
-
-            <article className="ap-contact-carte">
-              <div className="ap-contact-icone">📞</div>
-              <h3>Téléphone</h3>
-              <p>+212 600 000 000</p>
-            </article>
-
-            <article className="ap-contact-carte">
-              <div className="ap-contact-icone">✉️</div>
-              <h3>E-mail</h3>
-              <p>contact@rihla-voyages.example</p>
-            </article>
-
-            <article className="ap-contact-carte">
-              <div className="ap-contact-icone">🕒</div>
-              <h3>Horaires</h3>
-              <p>Du lundi au samedi</p>
-              <p>09h00 – 18h00</p>
-            </article>
+            {infos.map((info) => (
+              <article className="ap-contact-carte" key={info.titre}>
+                <div className="ap-contact-icone">{info.icon}</div>
+                <h3>{info.titre}</h3>
+                {info.lignes.map((ligne) =>
+                  info.lien ? (
+                    <a href={info.lien} key={ligne}>{ligne}</a>
+                  ) : (
+                    <p key={ligne}>{ligne}</p>
+                  )
+                )}
+              </article>
+            ))}
           </div>
         </section>
-
-        {/* Appel à l'action */}
-        
-        
       </main>
 
       <Footer />

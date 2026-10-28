@@ -53,7 +53,7 @@ useEffect(() => {
         .map((ville) => (
           <div className="ville" key={ville.id}>
             <img
-              src={`http://site1.local/TRAVEL/travel-app-backend/${ville.image}`}
+              src={`http://php.local/TRAVEL/travel-app-backend/${ville.image}`}
               alt={ville.nom}
             />
 

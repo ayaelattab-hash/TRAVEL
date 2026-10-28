@@ -1,0 +1,127 @@
+.ins-page {
+  min-height: 70vh;
+  padding: 72px 24px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background: #FAF8F3;
+  font-family: 'Lato', sans-serif;
+}
+
+.ins-carte {
+  width: 100%;
+  max-width: 460px;
+  padding: 44px 40px;
+  background: #FFFFFF;
+  border: 1px solid #D9D3C5;
+  box-sizing: border-box;
+}
+
+.ins-surtitre {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #3E7A63;
+}
+
+.ins-carte h1 {
+  margin: 12px 0 28px;
+  font-family: 'Playfair Display', serif;
+  font-size: 34px;
+  font-weight: 500;
+  color: #12263F;
+}
+
+.ins-carte form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.ins-champ {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ins-champ label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #12263F;
+}
+
+.ins-champ input {
+  height: 52px;
+  padding: 0 16px;
+  border: 1px solid #B9B2A2;
+  font-size: 16px;
+  font-family: inherit;
+  color: #12263F;
+  box-sizing: border-box;
+}
+
+.ins-champ input:focus {
+  outline: 2px solid #3E7A63;
+  outline-offset: 1px;
+}
+
+.ins-erreur {
+  margin: 0;
+  padding: 12px 16px;
+  background: #FBEDEC;
+  border: 1px solid #B3261E;
+  font-size: 14px;
+  color: #B3261E;
+}
+
+.ins-carte button {
+  height: 52px;
+  border: 0;
+  background: #12263F;
+  color: #FAF8F3;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.ins-carte button:hover {
+  background: #3E7A63;
+}
+
+.ins-carte button:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.ins-succes {
+  padding: 20px;
+  background: #E8F1EC;
+  border: 1px solid #3E7A63;
+  color: #1D4F3A;
+}
+
+.ins-succes p {
+  margin: 0 0 12px;
+  line-height: 1.6;
+}
+
+.ins-succes a {
+  font-weight: 700;
+  color: #1D4F3A;
+}
+.ins-lien {
+  margin: 24px 0 0;
+  font-size: 15px;
+  color: #3A4E66;
+}
+
+.ins-lien a {
+  font-weight: 700;
+  color: #3E7A63;
+}

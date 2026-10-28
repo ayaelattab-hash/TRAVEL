@@ -6,7 +6,7 @@ export const fetchVilles = createAsyncThunk(
   "destinations/fetchVilles",
   async () => {
     const response = await fetch(
-      "http://site1.local/TRAVEL/travel-app-backend/routes/afficheVilles.php"
+      "http://php.local/TRAVEL/travel-app-backend/routes/afficheVilles.php"
     );
 
     if (!response.ok) {
@@ -29,7 +29,7 @@ export const ajouterVille = createAsyncThunk(
     formData.append("image", ville.image);
 
     const response = await fetch(
-      "http://site1.local/TRAVEL/travel-app-backend/routes/ajouterVille.php",
+      "http://php.local/TRAVEL/travel-app-backend/routes/ajouterVille.php",
       {
         method: "POST",
         body: formData
