@@ -1,0 +1,355 @@
+
+/* ===== REGLAGES GENERAUX ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+  background: #FAF8F3;
+  color: #12263F;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ===== GRANDE PHOTO D'ACCUEIL ===== */
+.hero {
+  min-height: 560px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 64px 24px;
+  text-align: center;
+  color: #FFFFFF;
+
+  background-image:
+    linear-gradient(
+      rgba(10, 25, 45, 0.45),
+      rgba(10, 25, 45, 0.65)
+    ),
+    url("/image/grandimage.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-contenu {
+  width: 100%;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.hero-petit-titre {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #E8EFE9;
+}
+
+.hero h1 {
+  margin: 0;
+  font-family: "Playfair Display", serif;
+  font-size: 58px;
+  line-height: 1.1;
+  font-weight: 500;
+}
+
+.hero p {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.7;
+  color: #EEF3F8;
+}
+
+/* ===== BOUTONS ===== */
+.bouton {
+  display: inline-block;
+  padding: 14px 30px;
+  background: #12263F;
+  color: #FAF8F3;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: background 0.3s;
+}
+
+.bouton:hover {
+  background: #3E7A63;
+}
+
+/* ===== SECTIONS ===== */
+.section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 24px;
+}
+
+.petit-titre {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #3E7A63;
+}
+
+.section h2,
+.agence-section h2 {
+  margin: 0;
+  font-family: "Playfair Display", serif;
+  font-size: 40px;
+  line-height: 1.15;
+  font-weight: 500;
+}
+
+.trait-or {
+  display: block;
+  width: 56px;
+  height: 1px;
+  background: #8A6A35;
+}
+
+/* ===== TITRES CENTRES ===== */
+.titre-centre {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+}
+
+.titre-centre p {
+  max-width: 520px;
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #3A4E66;
+}
+
+/* ===== TEXTE A GAUCHE + VIDEO A DROITE ===== */
+.video-section {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  align-items: center;
+  gap: 48px;
+}
+
+.video-contenu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.video-contenu h2 {
+  margin: 0;
+  font-family: "Playfair Display", serif;
+  font-size: 40px;
+  line-height: 1.15;
+  font-weight: 500;
+}
+
+.video-contenu p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #3A4E66;
+}
+
+.video-droite {
+  width: 100%;
+  min-width: 0;
+}
+
+.video-maroc {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 4px;
+  box-shadow: 0 8px 24px rgba(18, 38, 63, 0.15);
+}
+
+/* ===== CARTES DES DESTINATIONS ===== */
+.cartes {
+  margin-top: 48px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+}
+
+.carte {
+  min-width: 0;
+  background: #FFFFFF;
+  border: 1px solid #D9D3C5;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.carte:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 22px rgba(18, 38, 63, 0.12);
+}
+
+.carte img {
+  display: block;
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+
+.carte-texte {
+  padding: 28px;
+}
+
+.carte-texte h3 {
+  margin: 0 0 10px;
+  font-family: "Playfair Display", serif;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.carte-texte p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.75;
+  color: #3A4E66;
+}
+
+/* ===== INFORMATIONS DE L'AGENCE ===== */
+.agence-section {
+  padding: 80px 24px;
+  background: #F1EEE6;
+}
+
+.agence-section .titre-centre {
+  max-width: 650px;
+  margin: 0 auto 45px;
+}
+
+.agence-infos {
+  max-width: 1152px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.info-item {
+  min-width: 0;
+  padding: 28px 20px;
+  background: #FAF8F3;
+  border: 1px solid #D9D3C5;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.info-item:hover {
+  transform: translateY(-5px);
+}
+
+.info-icon {
+  margin-bottom: 15px;
+  font-size: 30px;
+  color: #3E7A63;
+}
+
+.info-item h3 {
+  margin: 0 0 15px;
+  font-family: "Playfair Display", serif;
+  font-size: 21px;
+  font-weight: 500;
+}
+
+.info-item p {
+  margin: 5px 0;
+  font-size: 14px;
+  line-height: 1.8;
+  color: #3A4E66;
+}
+
+.info-item a {
+  display: inline-block;
+  margin-top: 12px;
+  color: #3E7A63;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.info-item a:hover {
+  color: #8A6A35;
+}
+
+/* ===== TABLETTES ===== */
+@media (max-width: 900px) {
+  .cartes {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .agence-infos {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .video-section {
+    gap: 30px;
+  }
+
+  .video-contenu h2 {
+    font-size: 32px;
+  }
+}
+
+/* ===== TELEPHONES ===== */
+@media (max-width: 600px) {
+  .hero {
+    min-height: 440px;
+    padding: 50px 20px;
+  }
+
+  .hero h1 {
+    font-size: 38px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .section {
+    padding: 50px 18px;
+  }
+
+  .section h2,
+  .video-contenu h2,
+  .agence-section h2 {
+    font-size: 30px;
+  }
+
+  .video-section {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .cartes,
+  .agence-infos {
+    grid-template-columns: 1fr;
+  }
+
+  .carte img {
+    height: 240px;
+  }
+
+  .carte-texte {
+    padding: 22px;
+  }
+
+  .agence-section {
+    padding: 50px 18px;
+  }
+}

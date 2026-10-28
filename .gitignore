@@ -1,0 +1,16 @@
+# Dependencies
+node_modules/
+travel-app-fontend/node_modules/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+travel-app-fontend/.env
+travel-app-fontend/.env.*
+
+# Generated files
+dist/
+travel-app-fontend/dist/
+
+# Local uploads (optional)

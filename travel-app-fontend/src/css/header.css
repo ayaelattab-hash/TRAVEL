@@ -1,0 +1,68 @@
+header {
+  position: sticky;                 /* reste en haut quand on descend */
+  top: 0;
+  z-index: 100;                     /* au-dessus du reste de la page */
+  background: #FFFFFF;
+  border-bottom: 1px solid #D9D3C5;
+}
+
+.header-contenu {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  font-weight: 600;
+  color: #12263F;
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+nav a {
+  padding: 10px 14px;
+  font-family: 'Lato', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #12263F;
+  border-bottom: 2px solid transparent;
+}
+
+nav a:hover {
+  color: #3E7A63;
+}
+
+/* lien de la page actuelle (React Router ajoute "active") */
+nav a.active {
+  border-bottom: 2px solid #12263F;
+}
+
+/* bouton Inscription */
+nav a.inscription {
+  margin-left: 8px;
+  padding: 12px 22px;
+  background: #12263F;
+  color: #FAF8F3;
+  border-bottom: 2px solid transparent;
+}
+
+nav a.inscription:hover {
+  background: #3E7A63;
+  color: #FFFFFF;
+}

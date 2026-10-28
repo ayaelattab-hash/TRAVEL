@@ -1,0 +1,235 @@
+
+/* PAGE PRINCIPALE */
+.dashboard {
+  width: 70%;
+  margin: 30px auto;
+  font-family: Arial, sans-serif;
+  color: #172554;
+  min-height: 100vh;
+}
+
+/* BARRE DE RECHERCHE */
+.dashboard input[type="text"] {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 15px;
+  border: 1px solid #dbe2ea;
+  border-radius: 8px;
+  outline: none;
+  font-size: 15px;
+  background: white;
+}
+
+.dashboard input[type="text"]:focus {
+  border-color: #2563eb;
+}
+
+/* SECTION BIENVENUE */
+.bienvenue {
+  background: #172554;
+  color: white;
+  padding: 18px 25px;
+  margin: 25px 0;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.bienvenue h2 {
+  margin: 0 0 8px;
+  font-size: 22px;
+}
+
+.bienvenue p {
+  margin: 0;
+  color: #dbeafe;
+  font-size: 14px;
+}
+
+.bienvenue img {
+  width: 110px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* TITRE ET BOUTON AJOUTER */
+.titre {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin: 30px 0 20px;
+}
+
+.titre h2 {
+  margin: 0;
+  font-size: 23px;
+  color: #172554;
+}
+
+/* STYLE COMMUN DES BOUTONS */
+.dashboard button {
+  border: none;
+  padding: 10px 16px;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background 0.2s, color 0.2s;
+}
+
+/* AJOUTER : BLEU FONCE */
+.titre button {
+  background: #172554;
+  color: white;
+}
+
+.titre button:hover {
+  background: #1e3a8a;
+}
+
+/* LISTE DES VILLES */
+.ville {
+  width: 100%;
+  box-sizing: border-box;
+  background: white;
+  padding: 15px 18px;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+  transition: box-shadow 0.2s;
+}
+
+.ville:hover {
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+}
+
+/* IMAGE DE LA VILLE */
+.ville img {
+  width: 90px;
+  height: 75px;
+  object-fit: cover;
+  border-radius: 7px;
+  flex-shrink: 0;
+}
+
+/* INFORMATIONS DE LA VILLE */
+.info-ville {
+  flex: 1;
+  min-width: 0;
+}
+
+.info-ville h3 {
+  margin: 0 0 7px;
+  color: #172554;
+  font-size: 17px;
+}
+
+.info-ville p {
+  margin: 0;
+  color: #64748b;
+  font-size: 14px;
+}
+
+/* MODIFIER : BLEU */
+.ville button:first-of-type {
+  background: #2563eb;
+  color: white;
+}
+
+.ville button:first-of-type:hover {
+  background: #1d4ed8;
+}
+
+/* SUPPRIMER : TEXTE ROUGE SANS CADRE */
+.ville button:last-of-type {
+  background: transparent;
+  color: #dc2626;
+  border: none;
+  box-shadow: none;
+  padding: 10px;
+}
+
+.ville button:last-of-type:hover {
+  background: transparent;
+  color: #991b1b;
+  text-decoration: underline;
+}
+
+/* MESSAGE DE CHARGEMENT OU ERREUR */
+.dashboard > p {
+  color: #64748b;
+  font-size: 14px;
+}
+
+/* RESPONSIVE : TABLETTE ET TELEPHONE */
+@media (max-width: 768px) {
+  .dashboard {
+    width: 92%;
+    margin: 20px auto;
+  }
+
+  .bienvenue {
+    padding: 15px;
+  }
+
+  .bienvenue h2 {
+    font-size: 18px;
+  }
+
+  .bienvenue img {
+    width: 80px;
+    height: 70px;
+  }
+
+  .titre {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .titre h2 {
+    font-size: 19px;
+  }
+
+  .ville {
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 12px;
+  }
+
+  .ville img {
+    width: 70px;
+    height: 65px;
+  }
+
+  .info-ville {
+    flex: 1;
+  }
+
+  .ville button {
+    padding: 9px 12px;
+  }
+}
+
+@media (max-width: 400px) {
+  .bienvenue img {
+    width: 65px;
+    height: 60px;
+  }
+
+  .ville {
+    gap: 8px;
+  }
+
+  .ville button {
+    font-size: 12px;
+    padding: 8px;
+  }
+}

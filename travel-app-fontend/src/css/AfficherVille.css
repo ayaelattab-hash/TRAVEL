@@ -1,0 +1,172 @@
+
+.destination-page {
+  font-family: monospace;
+  font-weight:thin;
+  color: #25213a;
+}
+
+.discover-section {
+  min-height: 420px;
+  display: flex;
+  align-items: center;
+  padding: 55px 8%;
+  background:
+    linear-gradient(90deg, rgba(25, 15, 45, 0.8), rgba(25, 15, 45, 0.1)),
+    url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1800&q=85")
+    center/cover;
+  color: white;
+}
+
+.discover-content {
+  max-width: 600px;
+}
+
+.discover-label,
+.section-heading > p {
+  color: #FFD6A5;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.discover-content h1 {
+  font-size: clamp(32px, 4vw, 52px);
+  line-height: 1.2;
+  margin: 15px 0;
+}
+
+.discover-content > p:not(.discover-label) {
+  font-size: 16px;
+  line-height: 1.8;
+  max-width: 470px;
+}
+
+.discover-button {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 13px 22px;
+  background: #6A00F4;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.destinations-section {
+  padding: 65px 5%;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.section-heading > p {
+  color: #6A00F4;
+}
+
+.section-heading h2 {
+  font-size: 32px;
+  margin: 10px 0;
+}
+
+.section-heading span {
+  color: #777;
+}
+
+.destinations-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  }
+
+.ville-card {
+  overflow: hidden;
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 5px 22px rgba(30, 20, 50, 0.1);
+  transition: transform 0.25s ease;
+}
+
+.ville-card:hover {
+  transform: translateY(-5px);
+}
+
+.ville-card img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  display: block;
+}
+
+.ville-card h2 {
+  font-size: 19px;
+  margin: 16px 16px 5px;
+}
+
+.ville-card h4 {
+  color: #6A00F4;
+  margin: 0 16px 10px;
+}
+
+.ville-card p {
+  color: #666;
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0 16px 18px;
+}
+
+@media (max-width: 1000px) {
+  .destinations-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .destinations-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .discover-section {
+    min-height: 350px;
+    padding: 30px 22px;
+  }
+
+  .destinations-section {
+    padding: 45px 20px;
+  }
+}
+
+.ville-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 16px;
+}
+
+.ville-info h2 {
+  margin: 0 0 5px;
+  font-size: 18px;
+}
+
+.ville-info p {
+  margin: 0;
+  color: #777;
+  font-size: 14px;
+}
+
+.weather {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  white-space: nowrap;
+  font-weight: 600;
+}
+
+.weather img {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+}
+
