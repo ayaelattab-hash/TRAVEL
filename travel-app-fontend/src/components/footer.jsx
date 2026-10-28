@@ -1,3 +1,4 @@
+import { FaInstagram, FaSnapchatGhost, FaFacebookF } from "react-icons/fa";
 import "../css/footer.css";
 
 function Footer() {
@@ -23,7 +24,7 @@ function Footer() {
           <a href="/">Accueil</a>
           <a href="/a-propos">À propos</a>
           <a href="/#destinations">Voyages</a>
-          <a href="#contact">Contact</a>
+          <a href="/contact">Contact</a>
         </div>
 
         <div className="footer-colonne">
@@ -33,13 +34,35 @@ function Footer() {
           <p>Agadir, Maroc</p>
         </div>
 
-        <form className="newsletter">
-          <label htmlFor="nl-email" className="newsletter-titre">
-            Recevez nos inspirations
-          </label>
-          <input id="nl-email" type="email" placeholder="votre@email.com" />
-          <button type="submit">S'inscrire</button>
-        </form>
+        <div className="footer-colonne">
+          <h3>Suivez-nous</h3>
+          <div className="reseaux">
+            <a
+              href="https://instagram.com/[votre_compte]"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Instagram"
+            >
+              <FaInstagram />
+            </a>
+            <a
+              href="https://snapchat.com/add/[votre_compte]"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Snapchat"
+            >
+              <FaSnapchatGhost />
+            </a>
+            <a
+              href="https://facebook.com/[votre_page]"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Facebook"
+            >
+              <FaFacebookF />
+            </a>
+          </div>
+        </div>
 
       </div>
 

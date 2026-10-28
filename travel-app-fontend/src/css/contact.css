@@ -1,0 +1,334 @@
+/* ===== Petits éléments communs ===== */
+.petit-titre {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #3E7A63;
+}
+
+.trait-or {
+  display: block;
+  width: 56px;
+  height: 1px;
+  background: #8A6A35;
+}
+
+.ct-label {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #3E7A63;
+}
+
+/* ===== En-tête ===== */
+.ct-entete {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 88px 24px 56px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 18px;
+}
+
+.ct-entete h1 {
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  font-size: 52px;
+  line-height: 1.12;
+  font-weight: 500;
+}
+
+.ct-entete p {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.75;
+  color: #3A4E66;
+}
+
+/* ===== 4 cartes de contact ===== */
+.ct-cartes {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px 72px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.ct-carte {
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  background: #FFFFFF;
+  border: 1px solid #D9D3C5;
+  color: #12263F;
+  text-decoration: none;
+}
+
+a.ct-carte:hover {
+  border-color: #3E7A63;
+}
+
+.ct-icone {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #3E7A63;
+  border-radius: 50%;
+  font-size: 20px;
+  color: #3E7A63;
+}
+
+.ct-valeur {
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+/* ===== Horaires + réseaux + formulaire ===== */
+.ct-contenu {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px 96px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.ct-gauche {
+  flex: 1 1 340px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.ct-boite {
+  padding: 32px;
+  background: #FFFFFF;
+  border: 1px solid #D9D3C5;
+}
+
+.ct-boite .ct-label {
+  margin-bottom: 18px;
+}
+
+.ct-ligne {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #ECE7DB;
+  font-size: 16px;
+}
+
+.ct-ligne:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.ct-reseaux {
+  display: flex;
+  gap: 12px;
+}
+
+.ct-reseaux a {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #12263F;
+  border-radius: 50%;
+  font-size: 18px;
+  color: #12263F;
+  text-decoration: none;
+}
+
+.ct-reseaux a:hover {
+  background: #12263F;
+  color: #FAF8F3;
+}
+
+/* Formulaire */
+.ct-formulaire {
+  flex: 2 1 460px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  background: #FFFFFF;
+  border: 1px solid #D9D3C5;
+  box-sizing: border-box;
+}
+
+.ct-formulaire h2 {
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.ct-champ {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ct-champ label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.ct-champ input,
+.ct-champ textarea {
+  padding: 14px 16px;
+  border: 1px solid #B9B2A2;
+  background: #FFFFFF;
+  font-size: 16px;
+  font-family: inherit;
+  color: #12263F;
+  box-sizing: border-box;
+}
+
+.ct-champ input {
+  height: 52px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.ct-champ input:focus,
+.ct-champ textarea:focus {
+  outline: 2px solid #3E7A63;
+  outline-offset: 1px;
+}
+
+.ct-erreur {
+  font-size: 14px;
+  color: #B3261E;
+}
+
+.ct-succes {
+  margin: 0;
+  padding: 14px 18px;
+  background: #E8F1EC;
+  border: 1px solid #3E7A63;
+  color: #1D4F3A;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.ct-formulaire button {
+  align-self: flex-start;
+  height: 52px;
+  padding: 0 36px;
+  border: 0;
+  background: #12263F;
+  color: #FAF8F3;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.ct-formulaire button:hover {
+  background: #3E7A63;
+}
+
+.ct-formulaire small {
+  font-size: 14px;
+  color: #3A4E66;
+}
+
+/* ===== Carte ===== */
+.ct-map {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px 96px;
+}
+
+.ct-map iframe {
+  width: 100%;
+  height: 380px;
+  border: 0;
+  display: block;
+}
+
+.ct-map-vide {
+  height: 380px;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: 1px dashed #B9B2A2;
+  background: #FFFFFF;
+  color: #3A4E66;
+  font-size: 15px;
+  line-height: 1.6;
+  box-sizing: border-box;
+}
+
+/* ===== FAQ ===== */
+.ct-faq {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 24px 112px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.ct-faq-titre {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+}
+
+.ct-faq-titre h2 {
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  font-size: 40px;
+  font-weight: 500;
+}
+
+.ct-faq-liste {
+  border-top: 1px solid #D9D3C5;
+}
+
+.ct-faq-liste details {
+  padding: 22px 8px;
+  border-bottom: 1px solid #D9D3C5;
+}
+
+.ct-faq-liste summary {
+  cursor: pointer;
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+}
+
+.ct-faq-liste p {
+  margin: 14px 0 0;
+  font-size: 16px;
+  line-height: 1.75;
+  color: #3A4E66;
+}
+
+/* ===== Téléphone ===== */
+@media (max-width: 600px) {
+  .ct-entete h1 { font-size: 36px; }
+  .ct-formulaire { padding: 24px; }
+  .ct-faq-titre h2 { font-size: 30px; }
+}

@@ -1,23 +1,24 @@
 header {
   position: sticky;                 /* reste en haut quand on descend */
   top: 0;
-  z-index: 100;                     /* au-dessus du reste de la page */
+  z-index: 100;
   background: #FFFFFF;
   border-bottom: 1px solid #D9D3C5;
 }
 
+/* 3 zones : logo | liens (au milieu) | icônes */
 .header-contenu {
   max-width: 1200px;
   margin: 0 auto;
   padding: 16px 24px;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  flex-wrap: wrap;
   gap: 12px;
 }
 
 .logo {
+  justify-self: start;
   font-family: 'Playfair Display', serif;
   font-size: 32px;
   font-weight: 600;
@@ -25,9 +26,11 @@ header {
   text-decoration: none;
 }
 
+/* Liens au milieu */
 nav {
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 4px;
 }
@@ -48,21 +51,45 @@ nav a:hover {
   color: #3E7A63;
 }
 
-/* lien de la page actuelle (React Router ajoute "active") */
+/* lien de la page actuelle */
 nav a.active {
   border-bottom: 2px solid #12263F;
 }
 
-/* bouton Inscription */
-nav a.inscription {
-  margin-left: 8px;
-  padding: 12px 22px;
-  background: #12263F;
-  color: #FAF8F3;
-  border-bottom: 2px solid transparent;
+/* Icônes à droite */
+.header-icones {
+  justify-self: end;
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
-nav a.inscription:hover {
-  background: #3E7A63;
-  color: #FFFFFF;
+.header-icones a {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #12263F;
+  border-radius: 50%;
+  font-size: 16px;
+  color: #12263F;
+  text-decoration: none;
+}
+
+.header-icones a:hover {
+  background: #12263F;
+  color: #FAF8F3;
+}
+
+/* ===== Petit écran : liens sur une 2e ligne ===== */
+@media (max-width: 900px) {
+  .header-contenu {
+    grid-template-columns: 1fr auto;
+  }
+
+  nav {
+    grid-column: 1 / -1;
+    order: 3;
+  }
 }
