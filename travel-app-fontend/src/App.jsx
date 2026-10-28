@@ -6,9 +6,11 @@ import Contact from "./components/contact";
 import AjouterVille from "./pages/ajouteVilles";
 import AfficherVille from "./pages/AfficherVille";
 import Dashboard from "./pages/dashboard";
-
 import Inscription from "./components/inscription";
 import Connexion from "./components/connexion";
+
+import DetailsVille from "./pages/DetailsVille";
+import AjouterLieu from "./pages/AjouterLieu";
 
 function App() {
   return (
@@ -22,6 +24,15 @@ function App() {
 
       <Route path="/inscription" element={<Inscription />} />
       <Route path="/connexion" element={<Connexion />} />
+
+      <Route
+        path="/details-ville/:id"
+        element={<DetailsVille />}
+      />
+      <Route
+        path="/ajouter-lieu/:id"
+        element={<AjouterLieu />}
+      />
     </Routes>
   );
 }

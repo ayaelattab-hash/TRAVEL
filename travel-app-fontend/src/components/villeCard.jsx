@@ -1,7 +1,7 @@
 
 import { useEffect, useState } from "react";
 import { getWeather } from "../service/weatherService";
-
+import { useNavigate } from "react-router-dom";
 function VilleCard({ ville }) {
   const [weather, setWeather] = useState(null);
   const [loadingWeather, setLoadingWeather] = useState(true);
@@ -34,7 +34,7 @@ function VilleCard({ ville }) {
       actif = false;
     };
   }, [ville.nom]);
-
+const navigate = useNavigate();
   return (
     <div className="ville-card">
       <img src={`http://site1.local/TRAVEL/travel-app-backend/${ville.image}`} alt={ville.nom}/>
@@ -60,7 +60,15 @@ function VilleCard({ ville }) {
           )}
         </div>
       </div>
+      <button
+  onClick={() =>
+    navigate(`/details-ville/${ville.id_ville ?? ville.id}`)
+  }
+>
+  Découvrir la ville
+</button>
     </div>
+    
   );
 }
 
